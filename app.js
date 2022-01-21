@@ -1,11 +1,143 @@
 var score = -1;
-function myFunction() {
+
+var randomArr = [];
+var highScore = 0;
+
+function tile1() {
+    myFunction(1);
+}
+
+function tile2() {
+    myFunction(2);
+}
+
+function tile3() {
+    myFunction(3);
+}
+
+function tile4() {
+    myFunction(4);
+}
+
+function tile5() {
+    myFunction(5);
+}
+function tile6() {
+    myFunction(6);
+}
+
+function tile7() {
+    myFunction(7);
+}
+
+function tile8() {
+    myFunction(8);
+}
+
+function tile9() {
+    myFunction(9);
+}
+
+function tile10() {
+    myFunction(10);
+}
+
+function tile11() {
+    myFunction(11);
+}
+
+function tile12() {
+    myFunction(12);
+}
+
+function tile13() {
+    myFunction(13);
+}
+
+function tile14() {
+    myFunction(14);
+}
+
+function tile15() {
+    myFunction(15);
+}
+
+function tile16() {
+    myFunction(16);
+}
+
+function tile17() {
+    myFunction(17);
+}
+
+function tile18() {
+    myFunction(18);
+}
+
+function tile19() {
+    myFunction(19);
+}
+
+function tile20() {
+    myFunction(20);
+}
+
+function tile21() {
+    myFunction(21);
+}
+
+function tile22() {
+    myFunction(22);
+}
+
+function tile23() {
+    myFunction(23);
+}
+
+function tile24() {
+    myFunction(24);
+}
+
+function tile25() {
+    myFunction(25);
+}
+
+function myFunction(tileNum) {
     const random = Math.floor(Math.random() * 25 + 1);
+    randomArr.push(random);
     const r = Math.floor(Math.random() * 254 + 1);
     const g = Math.floor(Math.random() * 254 + 1);
     const b = Math.floor(Math.random() * 254 + 1);
-    const r2 = r + 20;
-    score = score + 1;
+    var r2 = r;
+    var g2 = g;
+    var b2 = b;
+    if (r > 200) {
+        r2 = r - 15;
+    } else {
+        r2 = r + 15;
+    } 
+
+    if (g > 200) {
+        g2 = g - 15;
+    } else {
+        g2 = g + 15;
+    }
+
+    if (b > 200) {
+        b2 = b - 15;
+    } else {
+        b2 = b + 15;
+    }
+
+    if (tileNum == randomArr[randomArr.length - 2]) {
+        score = score + 1;
+    } else {
+        score = 0;
+    }
+
+    if (score > highScore) {
+        highScore = score;
+    }
     document.getElementById('id1').style.color = "rgb(" + r + ", " + g + "," + b + ")";
     document.getElementById('1').style.backgroundColor = "rgb(" + r + ", " + g + "," + b + ")";
     document.getElementById('2').style.backgroundColor = "rgb(" + r + ", " + g + "," + b + ")";
@@ -34,5 +166,5 @@ function myFunction() {
     document.getElementById('25').style.backgroundColor = "rgb(" + r + ", " + g + "," + b + ")";
     document.getElementById(random).style.backgroundColor = "rgb(" + r2 + ", " + g + "," + b + ")";
     document.getElementById('demo').innerHTML = score;
-    
+    document.getElementById('highScore').innerHTML = highScore;
 }
