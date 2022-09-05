@@ -111,33 +111,53 @@ function myFunction(tileNum) {
     var r2 = r;
     var g2 = g;
     var b2 = b;
-    if (r > 200) {
-        r2 = r - 15;
+
+    if (score < 3) {
+        level = 1;
+        difference = 17;
+    } else if (score < 6) {
+        level = 2;
+        difference = 14;
+    } else if (score < 9) {
+        level = 3;
+        difference = 10;
+    } else if (score < 12) {
+        level = 4;
+        difference = 7;
     } else {
-        r2 = r + 15;
+        level = 5;
+        difference = 4;
+    }
+
+    if (r > 200) {
+        r2 = r - difference;
+    } else {
+        r2 = r + difference;
     } 
 
     if (g > 200) {
-        g2 = g - 15;
+        g2 = g - difference;
     } else {
-        g2 = g + 15;
+        g2 = g + difference;
     }
 
     if (b > 200) {
-        b2 = b - 15;
+        b2 = b - difference;
     } else {
-        b2 = b + 15;
+        b2 = b + difference;
     }
 
     if (tileNum == randomArr[randomArr.length - 2]) {
         score = score + 1;
     } else {
+        level = 0;
         score = 0;
     }
 
     if (score > highScore) {
         highScore = score;
     }
+    
     document.getElementById('id1').style.color = "rgb(" + r + ", " + g + "," + b + ")";
     document.getElementById('1').style.backgroundColor = "rgb(" + r + ", " + g + "," + b + ")";
     document.getElementById('2').style.backgroundColor = "rgb(" + r + ", " + g + "," + b + ")";
@@ -164,7 +184,8 @@ function myFunction(tileNum) {
     document.getElementById('23').style.backgroundColor = "rgb(" + r + ", " + g + "," + b + ")";
     document.getElementById('24').style.backgroundColor = "rgb(" + r + ", " + g + "," + b + ")";
     document.getElementById('25').style.backgroundColor = "rgb(" + r + ", " + g + "," + b + ")";
-    document.getElementById(random).style.backgroundColor = "rgb(" + r2 + ", " + g + "," + b + ")";
+    document.getElementById(random).style.backgroundColor = "rgb(" + r2 + ", " + g2 + "," + b2 + ")";
     document.getElementById('demo').innerHTML = score;
+    document.getElementById('level').innerHTML = level;
     document.getElementById('highScore').innerHTML = highScore;
 }

@@ -1,11 +1,17 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
 button {
-  width:50px;
-  height:50px;
+  width:100px;
+  height:100px;
 }
 body {
     font-size: 20px;
     color: white;
-    background: #3d3d44;
+    background: #121212;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 html {
