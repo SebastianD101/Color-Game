@@ -56,6 +56,20 @@ body {
 h1 {
   font-family:monospace;
 }
+button {
+  border-radius: 15px;
+}
+
+@font-face {
+  font-family: SunnyspellsRegular-MV9ze;
+  src: url("SunnyspellsRegular-MV9ze.otf") format("opentype");
+}
+
+@font-face {
+  font-family: BalonkuRegular-la1w;
+  src: url("BalonkuRegular-la1w.otf") format("opentype");
+}
+
 
 @keyframes slide {
   0% {

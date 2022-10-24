@@ -157,6 +157,11 @@ function myFunction(tileNum) {
     if (score > highScore) {
         highScore = score;
     }
+
+    if (level == 2) {
+        // make id2 invisible
+        document.getElementById("id2").style.visibility = "hidden";
+    }
     
     document.getElementById('id1').style.color = "rgb(" + r + ", " + g + "," + b + ")";
     document.getElementById('1').style.backgroundColor = "rgb(" + r + ", " + g + "," + b + ")";

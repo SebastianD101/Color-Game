@@ -14,10 +14,12 @@
 <script src="app.js"></script>
 <body onload="myFunction()">
     <br>
-    <center><h1 id="id1">Sebastian's Color Game</h1></center>
+    <center>
+        <h1 id="id1" style="font-family: BalonkuRegular-la1w; padding: 0%; margin: 0%; border: 0px;">Sebastian's Color Game</h1>
+        <p id="id2" style="padding-top: 0%; margin-top: 0%; padding-bottom: 30px;">click the unique color!</p>
+    </center>
 <div class="area">
     <center>
-        <p>click the unique color!</p>
         <button class="colorButton" id="1" onclick="tile1()"></button>
         <button id="2" onclick="tile2()"></button>
         <button id="3" onclick="tile3()"></button>
@@ -43,7 +45,7 @@
         <button id="23" onclick="tile23()"></button>
         <button id="24" onclick="tile24()"></button>
         <button id="25" onclick="tile25()"></button><br><br>
-        Level: <a id="level"></a><br>
+        <span id="levelSpan">Level: <a id="level"></a></span><br>
         Score: <a id="demo"></a><br>
         High Score: <a id="highScore"></a>
     </center>
